@@ -13,6 +13,7 @@ fi
 rm -rf "${out_dir}"
 mkdir -p "${out_dir}"
 cp -R "${src_dir}/." "${out_dir}/"
+rm -rf "${out_dir}/assets"
 
 tmp_file="$(mktemp)"
 awk '
