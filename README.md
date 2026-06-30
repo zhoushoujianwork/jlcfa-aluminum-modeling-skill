@@ -43,23 +43,26 @@ npx clawhub@latest install jlcfa-aluminum-modeling \
   --dir skills
 ```
 
-## Install From SkillHub
+## Install From SkillHub.cn
 
-Use your local SkillHub login/registry configuration. This repository intentionally does not pin a private registry URL.
+This skill is prepared for the public SkillHub.cn registry. Install the official CLI, then install the skill after it is published and approved:
 
 ```bash
-skillhub install jlcfa-aluminum-modeling \
-  --namespace global \
-  --agent codex \
-  --force
+curl -fsSL https://skillhub.cn/install/install.sh | bash -s -- --cli-only
+skillhub install jlcfa-aluminum-modeling
 ```
 
-To publish the local skill directory to your configured SkillHub registry:
+Maintainers can publish through the SkillHub.cn CLI flow:
 
 ```bash
-skillhub publish ./jlcfa-aluminum-modeling \
-  --namespace global \
-  --visibility public
+export SKILLHUB_KEY="skh_your_api_key"
+skillhub login --key "$SKILLHUB_KEY" --host https://api.skillhub.cn
+skillhub auth whoami
+
+publish_dir="$(./scripts/build-skillhub-cn-package.sh)"
+skillhub publish "$publish_dir" \
+  --host https://api.skillhub.cn \
+  --changelog "Initial public SkillHub.cn release"
 ```
 
 ## Install From GitHub
