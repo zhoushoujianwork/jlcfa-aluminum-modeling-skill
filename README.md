@@ -55,9 +55,9 @@ npx clawhub@latest install @zhoushoujianwork/jlcfa-aluminum-modeling \
 
 ## Install From SkillHub.cn
 
-This skill is prepared for the public SkillHub.cn registry. Install the official CLI, then install the skill after it is published and approved:
+This skill has been submitted to the public SkillHub.cn registry as `jlcfa-aluminum-modeling`. Install the official CLI, then install the skill after platform review and security scanning are complete:
 
-Homepage after approval: https://skillhub.cn/skills/jlcfa-aluminum-modeling
+Homepage: https://skillhub.cn/skills/jlcfa-aluminum-modeling
 
 ```bash
 curl -fsSL https://skillhub.cn/install/install.sh | bash -s -- --cli-only
@@ -74,7 +74,7 @@ skillhub auth whoami
 publish_dir="$(./scripts/build-skillhub-cn-package.sh)"
 skillhub publish "$publish_dir" \
   --host https://api.skillhub.cn \
-  --changelog "Initial public SkillHub.cn release"
+  --changelog "Update release"
 ```
 
 ## Install From GitHub
