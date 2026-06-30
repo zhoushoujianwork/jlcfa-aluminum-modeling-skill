@@ -1,6 +1,8 @@
 # JLCFA Aluminum Modeling Skill
 
-Codex skill for designing and reviewing aluminum alloy enclosure modeling attributes against JLCFA/JiaLiChuang FA public process guidance.
+Standalone agent skill for designing and reviewing aluminum alloy enclosure modeling attributes against JLCFA/JiaLiChuang FA public process guidance.
+
+This repository is primarily a skill package. A plugin wrapper can include it later, but the portable artifact is the `jlcfa-aluminum-modeling/` skill directory.
 
 The skill helps an agent turn natural-language enclosure requirements into a structured, checkable attribute set covering:
 
@@ -21,16 +23,47 @@ The installable skill lives in:
 jlcfa-aluminum-modeling/
 ```
 
-## Install Locally
+## Install From SkillHub
 
-Copy the skill folder into your Codex skills directory:
+After the skill is published to SkillHub, install it with:
 
 ```bash
+skillhub install jlcfa-aluminum-modeling \
+  --namespace global \
+  --agent codex \
+  --registry http://skillhub.patsnap.info \
+  --force
+```
+
+## Install From GitHub
+
+Clone the repository, then copy the skill folder into your Codex skills directory:
+
+```bash
+git clone https://github.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill.git
+cd jlcfa-aluminum-modeling-skill
 mkdir -p ~/.codex/skills
 cp -R jlcfa-aluminum-modeling ~/.codex/skills/
 ```
 
 Then start a new Codex thread so the skill metadata is reloaded.
+
+## ClawHub / OpenCode Style
+
+If this skill is indexed in ClawHub, install it with the common ClawHub command shape:
+
+```bash
+npx clawhub@latest install jlcfa-aluminum-modeling \
+  --workdir "$HOME/.config/opencode" \
+  --dir skills
+```
+
+For a direct OpenCode-style local install from this repository:
+
+```bash
+mkdir -p "$HOME/.config/opencode/skills"
+cp -R jlcfa-aluminum-modeling "$HOME/.config/opencode/skills/"
+```
 
 ## Example Prompts
 
@@ -62,4 +95,3 @@ JLCFA, JiaLiChuang, and 嘉立创 are trademarks or names of their respective ow
 ## License
 
 MIT
-
