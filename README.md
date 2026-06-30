@@ -23,9 +23,19 @@ The installable skill lives in:
 jlcfa-aluminum-modeling/
 ```
 
+## Public Pages
+
+- Source homepage: https://github.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill
+- ClawHub homepage: https://clawhub.ai/skills/skills/jlcfa-aluminum-modeling
+- SkillHub.cn homepage: https://skillhub.cn/skills/jlcfa-aluminum-modeling
+- SkillHub.cn publish guide: https://skillhub.cn/tutorials#publish-via-cli
+- SkillHub.cn API host: https://api.skillhub.cn
+
 ## Install From ClawHub
 
 This skill is published on ClawHub as `jlcfa-aluminum-modeling`.
+
+Homepage: https://clawhub.ai/skills/skills/jlcfa-aluminum-modeling
 
 For Codex:
 
@@ -46,6 +56,8 @@ npx clawhub@latest install jlcfa-aluminum-modeling \
 ## Install From SkillHub.cn
 
 This skill is prepared for the public SkillHub.cn registry. Install the official CLI, then install the skill after it is published and approved:
+
+Homepage after approval: https://skillhub.cn/skills/jlcfa-aluminum-modeling
 
 ```bash
 curl -fsSL https://skillhub.cn/install/install.sh | bash -s -- --cli-only
@@ -68,6 +80,8 @@ skillhub publish "$publish_dir" \
 ## Install From GitHub
 
 Clone the repository, then copy the skill folder into your Codex skills directory:
+
+Homepage: https://github.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill
 
 ```bash
 git clone https://github.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill.git
