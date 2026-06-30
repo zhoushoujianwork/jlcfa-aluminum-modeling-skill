@@ -10,7 +10,7 @@ Use this skill to turn enclosure requirements into structured modeling attribute
 
 ## Usage Preview
 
-![BBClaw aluminum enclosure design preview](assets/bbclaw-usage-preview.png)
+![BBClaw aluminum enclosure design preview](https://raw.githubusercontent.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill/main/jlcfa-aluminum-modeling/assets/bbclaw-usage-preview.png)
 
 Example output from a BBClaw enclosure request: the skill reads a 3MF shell reference, turns the request into JLCFA-oriented design notes, structured JSON attributes, and a front-panel SVG preview.
 
