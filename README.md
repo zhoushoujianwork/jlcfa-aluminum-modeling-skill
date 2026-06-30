@@ -23,16 +23,43 @@ The installable skill lives in:
 jlcfa-aluminum-modeling/
 ```
 
+## Install From ClawHub
+
+This skill is published on ClawHub as `jlcfa-aluminum-modeling`.
+
+For Codex:
+
+```bash
+npx clawhub@latest install jlcfa-aluminum-modeling \
+  --workdir "$HOME/.codex" \
+  --dir skills
+```
+
+For OpenCode:
+
+```bash
+npx clawhub@latest install jlcfa-aluminum-modeling \
+  --workdir "$HOME/.config/opencode" \
+  --dir skills
+```
+
 ## Install From SkillHub
 
-After the skill is published to SkillHub, install it with:
+Use your local SkillHub login/registry configuration. This repository intentionally does not pin a private registry URL.
 
 ```bash
 skillhub install jlcfa-aluminum-modeling \
   --namespace global \
   --agent codex \
-  --registry http://skillhub.patsnap.info \
   --force
+```
+
+To publish the local skill directory to your configured SkillHub registry:
+
+```bash
+skillhub publish ./jlcfa-aluminum-modeling \
+  --namespace global \
+  --visibility public
 ```
 
 ## Install From GitHub
@@ -48,17 +75,7 @@ cp -R jlcfa-aluminum-modeling ~/.codex/skills/
 
 Then start a new Codex thread so the skill metadata is reloaded.
 
-## ClawHub / OpenCode Style
-
-If this skill is indexed in ClawHub, install it with the common ClawHub command shape:
-
-```bash
-npx clawhub@latest install jlcfa-aluminum-modeling \
-  --workdir "$HOME/.config/opencode" \
-  --dir skills
-```
-
-For a direct OpenCode-style local install from this repository:
+For a direct OpenCode-style local install from this repository without ClawHub:
 
 ```bash
 mkdir -p "$HOME/.config/opencode/skills"
