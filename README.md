@@ -26,7 +26,7 @@ jlcfa-aluminum-modeling/
 ## Public Pages
 
 - Source homepage: https://github.com/zhoushoujianwork/jlcfa-aluminum-modeling-skill
-- ClawHub homepage: https://clawhub.ai/skills/skills/jlcfa-aluminum-modeling
+- ClawHub homepage: https://clawhub.ai/zhoushoujianwork/skills/jlcfa-aluminum-modeling
 - SkillHub.cn homepage: https://skillhub.cn/skills/jlcfa-aluminum-modeling
 - SkillHub.cn publish guide: https://skillhub.cn/tutorials#publish-via-cli
 - SkillHub.cn API host: https://api.skillhub.cn
@@ -35,12 +35,12 @@ jlcfa-aluminum-modeling/
 
 This skill is published on ClawHub as `jlcfa-aluminum-modeling`.
 
-Homepage: https://clawhub.ai/skills/skills/jlcfa-aluminum-modeling
+Homepage: https://clawhub.ai/zhoushoujianwork/skills/jlcfa-aluminum-modeling
 
 For Codex:
 
 ```bash
-npx clawhub@latest install jlcfa-aluminum-modeling \
+npx clawhub@latest install @zhoushoujianwork/jlcfa-aluminum-modeling \
   --workdir "$HOME/.codex" \
   --dir skills
 ```
@@ -48,7 +48,7 @@ npx clawhub@latest install jlcfa-aluminum-modeling \
 For OpenCode:
 
 ```bash
-npx clawhub@latest install jlcfa-aluminum-modeling \
+npx clawhub@latest install @zhoushoujianwork/jlcfa-aluminum-modeling \
   --workdir "$HOME/.config/opencode" \
   --dir skills
 ```
