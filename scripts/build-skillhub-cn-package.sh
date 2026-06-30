@@ -21,7 +21,7 @@ awk '
     print "name: jlcfa-aluminum-modeling"
     print "slug: jlcfa-aluminum-modeling"
     print "displayName: JLCFA Aluminum Modeling"
-    print "version: 1.0.0"
+    print "version: 1.0.1"
     print "summary: Build and review JLCFA aluminum alloy enclosure modeling attributes for manufacturable shell designs."
     print "description: \"Build and review JLCFA/JiaLiChuang FA aluminum alloy enclosure modeling attributes. Use when users mention JiaLiChuang, JLCFA, aluminum enclosure, openings, threaded holes, countersunk holes, anodizing, UV printing, laser marking, cover machining, shell machining, or need AI/CAD attributes for manufacturable aluminum enclosure modeling.\""
     print "license: MIT"

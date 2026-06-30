@@ -8,6 +8,12 @@ license: MIT
 
 Use this skill to turn enclosure requirements into structured modeling attributes and to check them against JLCFA aluminum alloy enclosure process limits.
 
+## Usage Preview
+
+![BBClaw aluminum enclosure design preview](assets/bbclaw-usage-preview.png)
+
+Example output from a BBClaw enclosure request: the skill reads a 3MF shell reference, turns the request into JLCFA-oriented design notes, structured JSON attributes, and a front-panel SVG preview.
+
 ## Source Rules
 
 Before giving manufacturability advice, detailed dimensions, tolerances, materials, finishes, marking, or machining-process choices, read [references/jlcfa-standards.md](references/jlcfa-standards.md).

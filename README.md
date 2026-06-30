@@ -15,6 +15,12 @@ The skill helps an agent turn natural-language enclosure requirements into a str
 - cover/body machining process choices
 - tolerance and manufacturability checks
 
+## Usage Preview
+
+![BBClaw aluminum enclosure design preview](jlcfa-aluminum-modeling/assets/bbclaw-usage-preview.png)
+
+Example output from a BBClaw enclosure request: the skill reads a 3MF shell reference, turns the request into JLCFA-oriented design notes, structured JSON attributes, and a front-panel SVG preview.
+
 ## Skill Path
 
 The installable skill lives in:
