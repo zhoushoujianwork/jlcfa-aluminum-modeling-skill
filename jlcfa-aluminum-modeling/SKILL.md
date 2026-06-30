@@ -25,9 +25,10 @@ Treat the reference as a design aid transcribed from JLCFA public pages. For ord
 1. Parse the user's enclosure intent into: base shell/profile, cover plates, faces, openings, screw/countersink holes, text/graphics, finish, machining process, tolerances, and export needs.
 2. Keep dimensions in millimeters. State the coordinate frame you assume for each face, such as `front-panel origin at lower-left, +X right, +Y up`.
 3. Prefer explicit, machine-readable attributes. If the user only gives natural language, infer conservative defaults and mark every assumption.
-4. Check every feature against the JLCFA constraints in the reference: minimum cut width, opening-to-edge distance, rib reservations, available threaded holes, cover thickness, process choices, finish colors, and marking rules.
-5. When a feature conflicts with constraints, propose the smallest practical adjustment and explain which rule drove it.
-6. End with a compact "属性清单" plus a "待确认" list for missing dimensions, shell model/profile, quantity, color, surface quality, and production-critical tolerances.
+4. For built-in connector openings, map the user phrase to the standard-opening enum in the reference, and preserve the JLCFA Chinese label when the live designer label matters.
+5. Check every feature against the JLCFA constraints in the reference: minimum cut width, opening-to-edge distance, rib reservations, available threaded holes, cover thickness, process choices, finish colors, and marking rules.
+6. When a feature conflicts with constraints, propose the smallest practical adjustment and explain which rule drove it.
+7. End with a compact "属性清单" plus a "待确认" list for missing dimensions, shell model/profile, quantity, color, surface quality, and production-critical tolerances.
 
 ## Attribute Shape
 
@@ -74,6 +75,12 @@ Use this shape unless the target CAD/tool has its own schema:
       "diameterMm": null,
       "rotationDeg": 0,
       "process": "laser_cut|cnc|laser_mark|uv_print",
+      "standardOpening": {
+        "kind": "standard_round_through_hole|standard_round_tapered_countersink|ethernet_rj45|ethernet_rj45_led|usb_type_c_male|usb_type_c_female|usb_rect_usb_port|usb_micro_b_female|usb_mini_b_female|dsub_vga_hdmi_port|dsub_vga_ddmr00pm_d|dsub_vga_dvi_female|dsub_vga_hdmi_female|dsub_db9|dc_power_connector_variant_a|dc_power_connector_variant_b|custom_library_other",
+        "label": null,
+        "catalogGroup": "standard_round_hole|ethernet_connector|usb_connector|vga_dsub_connector|dc_power_connector|other",
+        "designerClearanceMm": 0.2
+      },
       "constraintsChecked": [],
       "notes": []
     }

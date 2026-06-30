@@ -9,6 +9,7 @@ The skill helps an agent turn natural-language enclosure requirements into a str
 - aluminum shell and cover materials
 - face-local coordinate assumptions
 - display, speaker, microphone, USB, antenna, and button openings
+- JLCFA standard-opening enum mapping for round holes, Ethernet, USB, D-Sub/VGA, DB9, and DC power connector openings
 - threaded and countersunk holes
 - sandblast anodizing colors
 - laser marking and UV printing
@@ -73,7 +74,7 @@ skillhub install jlcfa-aluminum-modeling
 Maintainers can publish through the SkillHub.cn CLI flow:
 
 ```bash
-export SKILLHUB_KEY="skh_your_api_key"
+export SKILLHUB_KEY="<your_skillhub_token>"
 skillhub login --key "$SKILLHUB_KEY" --host https://api.skillhub.cn
 skillhub auth whoami
 

@@ -31,6 +31,32 @@ Sources, reviewed 2026-06-30:
 - Avoid laser cutting/drilling at stiffening ribs, threaded-hole areas, or wall thickness over 4 mm.
 - System-library openings are already expanded by 0.2 mm clearance over the physical measured size.
 
+## Standard Opening Library
+
+Known standard opening labels transcribed from the JLCFA online designer help screenshots, reviewed 2026-06-30. Treat this as a stable modeling vocabulary, not a promise that the current live designer has no additional entries. If a live designer entry is not listed here, keep `feature.type: "standard_opening"`, set `standardOpening.kind: "custom_library_other"`, and preserve the exact displayed label.
+
+Standard/library openings only support position and relative-angle adjustment. Do not resize their cutout geometry unless the designer exposes a parameter for that specific entry.
+
+| Enum kind | JLCFA displayed label | Catalog group | Notes |
+| --- | --- | --- | --- |
+| `standard_round_through_hole` | 标准圆孔 / 通孔 | 标准圆孔 | Parameter panel shows `孔类型: 通孔`; choose the designer's displayed hole spec. |
+| `standard_round_tapered_countersink` | 标准圆孔 / 锥形沉头孔 | 标准圆孔 | Parameter panel shows `孔类型: 锥形沉头孔`; confirm screw/head standard before ordering. |
+| `ethernet_rj45` | 以太网连接器（网线接口） | 以太网连接器 | Use for normal RJ45/network-cable opening language. |
+| `ethernet_rj45_led` | 以太网连接器（带LED） | 以太网连接器 | Use when the connector has LED windows/light pipes in the jack opening. |
+| `usb_type_c_male` | USB连接（Type-C公端） | USB连接口 | Screenshot label says 公端; preserve label if the live designer distinguishes male/female/mechanical style. |
+| `usb_type_c_female` | USB连接（Type-C母） | USB连接口 | Visible in the standard-opening screenshot lower area. |
+| `usb_rect_usb_port` | USB连接（USB口） | USB连接口 | Rectangular USB opening shown by the designer; often maps to USB-A style requests, but keep the displayed label. |
+| `usb_micro_b_female` | USB连接（Micro-B母） | USB连接口 | Use for Micro-B female receptacle openings. |
+| `usb_mini_b_female` | USB连接（Mini-B母） | USB连接口 | Use for Mini-B female receptacle openings. |
+| `dsub_vga_hdmi_port` | D-Sub_VGA连接器（HDMI口） | VGA连接器 | Screenshot truncates the prefix as `D-Sub_VGA连...`; keep the complete readable suffix. |
+| `dsub_vga_ddmr00pm_d` | D-Sub_VGA连接器（D-DMR00PM-D...） | VGA连接器 | Specific displayed model is truncated in the screenshot; verify the current designer label for production. |
+| `dsub_vga_dvi_female` | D-Sub_VGA连接器（DVI母） | VGA连接器 | Use for DVI female style openings. |
+| `dsub_vga_hdmi_female` | D-Sub_VGA连接器（HDMI母） | VGA连接器 | Use for HDMI female style openings. |
+| `dsub_db9` | DB9 | VGA连接器 | DB9/D-sub 9-pin style opening. |
+| `dc_power_connector_variant_a` | DC电源连接器 | DC电源连接器 | One of two visible DC power connector variants; the screenshot does not expose the full variant name. |
+| `dc_power_connector_variant_b` | DC电源连接器 | DC电源连接器 | Second visible DC power connector variant; verify exact current label before production. |
+| `custom_library_other` | exact live-designer label | More common openings | Use for current built-in/library entries not captured above. Preserve label, category, and screenshot/source if available. |
+
 ## Countersunk Screw Holes
 
 Countersunk-hole execution standards listed by JLCFA: GB/T 819-1985, ISO 7046-1-1994, JIS B 1111-1996.
@@ -140,6 +166,7 @@ Body machining:
 - Use `process: "laser_cut"` only for simple through cutouts that satisfy minimum width, rib, edge, and thickness constraints.
 - Use `process: "cnc"` for blind holes, counterbores/countersinks, steps, sharp internal-corner expectations, wall thickness over 4 mm, or features near ribs/threaded regions.
 - Use `feature.type: "standard_opening"` for library cutouts and keep the 0.2 mm default clearance in mind.
+- For built-in openings, fill `standardOpening.kind` from the Standard Opening Library table and preserve the Chinese `label` when the entry name matters.
 - Use `feature.type: "custom_opening"` for user dimensions, and explicitly record checked constraints in `constraintsChecked`.
 - For marking, separate `laser_mark` and `uv_print`; record whether the artwork is `svg`, `image`, or `text`, and whether the selected color/process is single- or multi-color.
 - When the profile/model number is unknown, do not invent it. Set `profileId: "unknown"` and ask the user to pick a JLCFA shell model.
